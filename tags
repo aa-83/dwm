@@ -37,6 +37,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1987,8 +2026,10	patches/dwm-statuscmd.diff	/^@@ -1987,8 +2026,10 @@ updatesizehints(Client *c)$/;"	h	modifiedFile:a/dwm.c
 -1987,8 +2052,10	patches/dwm-statuscmd-signal-6.2.diff	/^@@ -1987,8 +2052,10 @@ updatesizehints(Client *c)$/;"	h	modifiedFile:a/dwm.c
 -199,6 +203,16	patches/vanitygaps.diff	/^@@ -199,6 +203,16 @@ static void sendmon(Client *c, Monitor *m);$/;"	h	modifiedFile:a/dwm.c
+-202,6 +202,8	patches/dwm-fixborders-6.2.diff	/^@@ -202,6 +202,8 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
 -2047,6 +2149,110	patches/swallow.diff	/^@@ -2047,6 +2149,110 @@ view(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -205,6 +207,7	patches/dwm-statuscmd-signal-6.2.diff	/^@@ -205,6 +207,7 @@ static void setup(void);$/;"	h	modifiedFile:a/dwm.c
 -207,7 +207,7	patches/xrdb.diff	/^@@ -207,7 +207,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
@@ -204,6 +205,7 @@ a/config.def.h	patches/swallow.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	patches/vanitygaps.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	patches/xrdb.diff	/^--- a\/config.def.h$/;"	m
 a/config.mk	patches/swallow.diff	/^--- a\/config.mk$/;"	m
+a/drw.c	patches/dwm-fixborders-6.2.diff	/^--- a\/drw.c$/;"	m
 a/drw.c	patches/xrdb.diff	/^--- a\/drw.c$/;"	m
 a/drw.h	patches/xrdb.diff	/^--- a\/drw.h$/;"	m
 a/dwm.c	patches/bottomstack.diff	/^--- a\/dwm.c$/;"	m
@@ -231,10 +233,9 @@ baseh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struc
 basew	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
 bh	dwm.c	/^static int bh, blw = 0;      \/* bar geometry *\/$/;"	v	typeref:typename:int	file:
 blw	dwm.c	/^static int bh, blw = 0;      \/* bar geometry *\/$/;"	v	typeref:typename:int	file:
-borderpx	config.h	/^static const unsigned int borderpx  = 2;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
+borderpx	config.h	/^static const unsigned int borderpx  = 5;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
 broken	dwm.c	/^static const char broken[] = "broken";$/;"	v	typeref:typename:const char[]	file:
 bstack	dwm.c	/^bstack(Monitor *m) {$/;"	f	typeref:typename:void	file:
-bstackhoriz	dwm.c	/^bstackhoriz(Monitor *m) {$/;"	f	typeref:typename:void	file:
 button	dwm.c	/^	unsigned int button;$/;"	m	struct:__anon0f53a99e0708	typeref:typename:unsigned int	file:
 buttonpress	dwm.c	/^buttonpress(XEvent *e)$/;"	f	typeref:typename:void
 buttons	config.h	/^static Button buttons[] = {$/;"	v	typeref:typename:Button[]
@@ -292,6 +293,7 @@ drw_setscheme	drw.c	/^drw_setscheme(Drw *drw, Clr *scm)$/;"	f	typeref:typename:v
 drw_text	drw.c	/^drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h, unsigned int lpad, const char */;"	f	typeref:typename:int
 dwindle	fibonacci.c	/^dwindle(Monitor *mon) {$/;"	f	typeref:typename:void
 dwm	Makefile	/^dwm: ${OBJ}$/;"	t
+dwm	README.md	/^# dwm$/;"	c
 dwmblockspid	dwm.c	/^pid_t dwmblockspid = 0;$/;"	v	typeref:typename:pid_t
 dwmblockssig	dwm.c	/^static int dwmblockssig;$/;"	v	typeref:typename:int	file:
 ecalloc	util.c	/^ecalloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
@@ -308,13 +310,13 @@ fonts	config.h	/^static const char *fonts[]          = { "monospace:size=11", "J
 fonts	drw.h	/^	Fnt *fonts;$/;"	m	struct:__anon0f5116480308	typeref:typename:Fnt *
 func	dwm.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0f53a99e0808	typeref:typename:void (*)(const Arg *)	file:
 func	dwm.c	/^	void (*func)(const Arg *arg);$/;"	m	struct:__anon0f53a99e0708	typeref:typename:void (*)(const Arg * arg)	file:
-gappih	config.h	/^static const unsigned int gappih    = 5;       \/* horiz inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappih	config.h	/^static const unsigned int gappih    = 15;       \/* horiz inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
 gappih	dwm.c	/^	int gappih;           \/* horizontal gap between windows *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
-gappiv	config.h	/^static const unsigned int gappiv    = 5;       \/* vert inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
+gappiv	config.h	/^static const unsigned int gappiv    = 15;       \/* vert inner gap between windows *\/$/;"	v	typeref:typename:const unsigned int
 gappiv	dwm.c	/^	int gappiv;           \/* vertical gap between windows *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
-gappoh	config.h	/^static const unsigned int gappoh    = 5;       \/* horiz outer gap between windows and screen ed/;"	v	typeref:typename:const unsigned int
+gappoh	config.h	/^static const unsigned int gappoh    = 15;       \/* horiz outer gap between windows and screen e/;"	v	typeref:typename:const unsigned int
 gappoh	dwm.c	/^	int gappoh;           \/* horizontal outer gaps *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
-gappov	config.h	/^static const unsigned int gappov    = 5;       \/* vert outer gap between windows and screen edg/;"	v	typeref:typename:const unsigned int
+gappov	config.h	/^static const unsigned int gappov    = 15;       \/* vert outer gap between windows and screen ed/;"	v	typeref:typename:const unsigned int
 gappov	dwm.c	/^	int gappov;           \/* vertical outer gaps *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 gc	drw.h	/^	GC gc;$/;"	m	struct:__anon0f5116480308	typeref:typename:GC
 getatomprop	dwm.c	/^getatomprop(Client *c, Atom prop)$/;"	f	typeref:typename:Atom
@@ -335,11 +337,7 @@ inch	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct
 incnmaster	dwm.c	/^incnmaster(const Arg *arg)$/;"	f	typeref:typename:void
 incrgaps	dwm.c	/^incrgaps(const Arg *arg)$/;"	f	typeref:typename:void
 incrigaps	dwm.c	/^incrigaps(const Arg *arg)$/;"	f	typeref:typename:void
-incrihgaps	dwm.c	/^incrihgaps(const Arg *arg)$/;"	f	typeref:typename:void
-incrivgaps	dwm.c	/^incrivgaps(const Arg *arg)$/;"	f	typeref:typename:void
 incrogaps	dwm.c	/^incrogaps(const Arg *arg)$/;"	f	typeref:typename:void
-incrohgaps	dwm.c	/^incrohgaps(const Arg *arg)$/;"	f	typeref:typename:void
-incrovgaps	dwm.c	/^incrovgaps(const Arg *arg)$/;"	f	typeref:typename:void
 incw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh;$/;"	m	struct:Client	typeref:typename:int	file:
 install	Makefile	/^install: all$/;"	t
 instance	dwm.c	/^	const char *instance;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const char *	file:
@@ -432,7 +430,7 @@ scan	dwm.c	/^scan(void)$/;"	f	typeref:typename:void
 scanner	dwm.c	/^static int scanner;$/;"	v	typeref:typename:int	file:
 scheme	drw.h	/^	Clr *scheme;$/;"	m	struct:__anon0f5116480308	typeref:typename:Clr *
 scheme	dwm.c	/^static Clr **scheme;$/;"	v	typeref:typename:Clr **	file:
-scratchpadcmd	config.h	/^static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x30", NULL };$/;"	v	typeref:typename:const char * []
+scratchpadcmd	config.h	/^static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x27", NULL };$/;"	v	typeref:typename:const char * []
 scratchpadname	config.h	/^static const char scratchpadname[] = "scratchpad";$/;"	v	typeref:typename:const char[]
 scratchtag	dwm.c	/^static unsigned int scratchtag = 1 << LENGTH(tags);$/;"	v	typeref:typename:unsigned int	file:
 screen	drw.h	/^	int screen;$/;"	m	struct:__anon0f5116480308	typeref:typename:int
@@ -469,7 +467,7 @@ stack	dwm.c	/^	Client *stack;$/;"	m	struct:Monitor	typeref:typename:Client *	fil
 stext	dwm.c	/^static char stext[256];$/;"	v	typeref:typename:char[256]	file:
 sw	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
 swallow	dwm.c	/^swallow(Client *p, Client *c)$/;"	f	typeref:typename:void
-swallowfloating	config.h	/^static const int swallowfloating    = 1;        \/* 1 means swallow floating windows by default /;"	v	typeref:typename:const int
+swallowfloating	config.h	/^static const int swallowfloating    = 0;        \/* 1 means swallow floating windows by default /;"	v	typeref:typename:const int
 swallowing	dwm.c	/^	Client *swallowing;$/;"	m	struct:Client	typeref:typename:Client *	file:
 swallowingclient	dwm.c	/^swallowingclient(Window w)$/;"	f	typeref:typename:Client *
 symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:const char *	file:
