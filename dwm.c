@@ -232,10 +232,10 @@ static void setgaps(int oh, int ov, int ih, int iv);
 static void incrgaps(const Arg *arg);
 static void incrigaps(const Arg *arg);
 static void incrogaps(const Arg *arg);
-static void incrohgaps(const Arg *arg);
+/*static void incrohgaps(const Arg *arg);
 static void incrovgaps(const Arg *arg);
 static void incrihgaps(const Arg *arg);
-static void incrivgaps(const Arg *arg);
+static void incrivgaps(const Arg *arg);*/
 static void togglegaps(const Arg *arg);
 static void defaultgaps(const Arg *arg);
 static void setlayout(const Arg *arg);
@@ -276,7 +276,7 @@ static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void xrdb(const Arg *arg);
 static void zoom(const Arg *arg);
 static void bstack(Monitor *m);
-static void bstackhoriz(Monitor *m);
+/*static void bstackhoriz(Monitor *m);*/
 
 static pid_t getparentprocess(pid_t p);
 static int isdescprocess(pid_t p, pid_t c);
@@ -1773,7 +1773,7 @@ incrogaps(const Arg *arg)
 }
 
 void
-incrohgaps(const Arg *arg)
+/*incrohgaps(const Arg *arg)
 {
 	setgaps(
 		selmon->gappoh + arg->i,
@@ -1816,7 +1816,7 @@ incrivgaps(const Arg *arg)
 	);
 }
 
-void
+void*/
 setlayout(const Arg *arg)
 {
 	if (!arg || !arg->v || arg->v != selmon->lt[selmon->sellt])
@@ -2683,7 +2683,7 @@ bstack(Monitor *m) {
 	}
 }
 
-static void
+/*static void
 bstackhoriz(Monitor *m) {
 	int w, mh, mx, tx, ty, th;
 	unsigned int i, n;
@@ -2711,4 +2711,4 @@ bstackhoriz(Monitor *m) {
 				ty += HEIGHT(c);
 		}
 	}
-}
+}*/
