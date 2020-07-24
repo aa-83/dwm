@@ -430,7 +430,7 @@ scan	dwm.c	/^scan(void)$/;"	f	typeref:typename:void
 scanner	dwm.c	/^static int scanner;$/;"	v	typeref:typename:int	file:
 scheme	drw.h	/^	Clr *scheme;$/;"	m	struct:__anon0f5116480308	typeref:typename:Clr *
 scheme	dwm.c	/^static Clr **scheme;$/;"	v	typeref:typename:Clr **	file:
-scratchpadcmd	config.h	/^static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x27", NULL };$/;"	v	typeref:typename:const char * []
+scratchpadcmd	config.h	/^static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x26", NULL };$/;"	v	typeref:typename:const char * []
 scratchpadname	config.h	/^static const char scratchpadname[] = "scratchpad";$/;"	v	typeref:typename:const char[]
 scratchtag	dwm.c	/^static unsigned int scratchtag = 1 << LENGTH(tags);$/;"	v	typeref:typename:unsigned int	file:
 screen	drw.h	/^	int screen;$/;"	m	struct:__anon0f5116480308	typeref:typename:int
