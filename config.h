@@ -16,7 +16,7 @@ static const char *fonts[]          = {
 	"Inconsolata Nerd Font Mono:size=11:style=regular:antialias=true:autohint=true",
 	"Inconsolata For Powerline:size=11:style=medium:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=9:style=regular:antialias=true:autohint=true",
-	"Source Han Serif:pixelsize=11:style=regular:antialias=true:autohint=true"
+	"Noto Sans CJK:pixelsize=11:style=regular:antialias=true:autohint=true"
 };
 
 static const char dmenufont[]       = "monospace:size=12:antialias=true:autohint=true";
