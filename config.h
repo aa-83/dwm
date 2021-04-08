@@ -60,24 +60,23 @@ static const int attachdirection = 5;    /* 0 default, 1 above, 2 aside, 3 below
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "HHH",      grid },
 	{ "[M]",      monocle },
+	{ "HHH",      grid },
 
 
 	{ "H[]",      deck },
-	{ "###",      nrowgrid },
 	{ "[\\]",     dwindle },
+	{ "###",      nrowgrid },
 
 
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "###",      nrowgrid },
 	{ "TTT",      bstack },
+	{ "---",      horizgrid },
 
 	{ "|M|",      centeredmaster },
 	{ "---",      horizgrid },
 	{ ">M>",      centeredfloatingmaster },
 	{ ":::",      gaplessgrid },
-	{ "###",      nrowgrid },
 	{ "===",      bstackhoriz },
 	{ "[@]",      spiral },
 	{ NULL,       NULL },
