@@ -3,10 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;      /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 15;      /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
 static int smartgaps                = 1;        /* 1 means no outer gap when there is only one window */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -65,12 +65,12 @@ static const Layout layouts[] = {
 
 
 	{ "H[]",      deck },
-	{ "[\\]",     dwindle },
-	{ "###",      nrowgrid },
+	{ "TTT",      bstack },
+	{ ":::",      gaplessgrid },
 
 
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "TTT",      bstack },
+	{ "[\\]",     dwindle },
 	{ "---",      horizgrid },
 
 	{ "|M|",      centeredmaster },
