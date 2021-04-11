@@ -73,14 +73,14 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[\\]",     dwindle },
 	{ "---",      horizgrid },
-
-	{ "|M|",      centeredmaster },
-	{ "---",      horizgrid },
-	{ ">M>",      centeredfloatingmaster },
-	{ ":::",      gaplessgrid },
-	{ "===",      bstackhoriz },
-	{ "[@]",      spiral },
-	{ NULL,       NULL },
+/* These are not used
+*	{ "|M|",      centeredmaster },
+*	{ "---",      horizgrid },
+*	{ ">M>",      centeredfloatingmaster },
+*	{ ":::",      gaplessgrid },
+*	{ "===",      bstackhoriz },
+*	{ "[@]",      spiral },
+	{ NULL,       NULL },*/
 };
 
 /* key definitions */
