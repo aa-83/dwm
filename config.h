@@ -70,13 +70,13 @@ static const int attachdirection = 5;    /* 0 default, 1 above, 2 aside, 3 below
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
+	{ "[]=",      tile },    /* first entry is default */
 	{ "HHH",      grid },
 
 
-	{ "H[]",      deck },
 	{ "TTT",      bstack },
+	{ "H[]",      deck },
 	{ ":::",      gaplessgrid },
 
 
