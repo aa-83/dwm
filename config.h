@@ -14,7 +14,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
 	"monospace:pixelsize=13:antialias=true:autohint=true",
 	"Noto Color Emoji:pixelsize=12:style=regular:antialias=true:autohint=true",
-	"Noto Sans CJK:pixelsize=13:style=regular:antialias=true:autohint=true"
+	"Noto Sans CJK:pixelsize=13:style=regular:antialias=true:autohint=true",
+	"Nerd Font Complete:pixelsize=14:style=regular:antialias=true:autohint=true"
 };
 
 /*static const char dmenufont[]       = "monospace:size=11:antialias=true:autohint=true";*/
