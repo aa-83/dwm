@@ -50,16 +50,19 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "firefox",	 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
-	{ "Pd",			 NULL,     NULL,           1 << 7,    0,          0,           0,        -1 },
-	{ "VirtualBox",	 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
-	{ "Dosbox",  	 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
-	{ "qBittorrent", NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
-	{ "Bless",       NULL,     NULL,           1 << 2,    0,          0,           0,        -1 },
-	{ "libreoffice", NULL,     NULL,           1 << 1,    0,          0,           0,        -1 },
-	{ "St",		     NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,		     NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
+	/* class			     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "firefox",			 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
+	{ "surf",				 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
+	{ "torbrowser-launcher", NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
+	{ "Pd",					 NULL,     NULL,           1 << 7,    0,          0,           0,        -1 },
+	{ "VirtualBox",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
+	{ "vncviewer",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
+	{ "Dosbox",				 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
+	{ "qBittorrent",		 NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
+	{ "Bless",				 NULL,     NULL,           1 << 2,    0,          0,           0,        -1 },
+	{ "libreoffice",		 NULL,     NULL,           1 << 1,    0,          0,           0,        -1 },
+	{ "St",					 NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,				     NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
