@@ -53,7 +53,6 @@ static const Rule rules[] = {
 	/* class			     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "firefox",			 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
 	{ "surf",				 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
-	{ "torbrowser-launcher", NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
 	{ "Pd",					 NULL,     NULL,           1 << 7,    0,          0,           0,        -1 },
 	{ "VirtualBox",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
 	{ "vncviewer",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
@@ -72,7 +71,7 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 static const int attachdirection = 5;    /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
-#include "vanitygaps.c"
+#include "patches/vanitygaps.c"
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -126,8 +125,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x26", NULL };
 
-#include "selfrestart.c"
-#include "movestack.c"
+#include "patches/selfrestart.c"
+#include "patches/movestack.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
