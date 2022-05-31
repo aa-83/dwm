@@ -50,18 +50,19 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class			     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	/* class		         instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "firefox",			 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
-	{ "surf",				 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
-	{ "Pd",					 NULL,     NULL,           1 << 7,    0,          0,           0,        -1 },
+	{ "surf",			 NULL,     NULL,           1 << 8,    0,          0,           0,        -1 },
+	{ "Pd",				 NULL,     NULL,           1 << 7,    0,          0,           0,        -1 },
 	{ "VirtualBox",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
 	{ "vncviewer",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
-	{ "Dosbox",				 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
+	{ "Dosbox",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
 	{ "qBittorrent",		 NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
-	{ "Bless",				 NULL,     NULL,           1 << 2,    0,          0,           0,        -1 },
+	{ "Discord-canary",		 NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
+	{ "Bless",			 NULL,     NULL,           1 << 2,    0,          0,           0,        -1 },
 	{ "libreoffice",		 NULL,     NULL,           1 << 1,    0,          0,           0,        -1 },
-	{ "St",					 NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,				     NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
+	{ "St",				 NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,			         NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -129,22 +130,22 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x26
 #include "patches/movestack.c"
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+	/* modifier                     key	        function        argument */
 	{ MODKEY,                       XK_d,           spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,      spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,           togglebar,      {0} },
 	{ MODKEY,                       XK_j,           focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,           focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_h,           incnmaster,     {.i = +1 } },
+        { MODKEY|ShiftMask,             XK_h,           incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,           incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,           setmfact,       {.f = -0.025} },
 	{ MODKEY,                       XK_l,           setmfact,       {.f = +0.025} },
 	{ MODKEY,                       XK_v,           setcfact,       {.f = +0.025} },
 	{ MODKEY|ShiftMask,             XK_v,           setcfact,       {.f = -0.025} },
 	{ MODKEY|ShiftMask,             XK_d,           setcfact,       {.f =  0.00} },
-	{ MODKEY|ShiftMask,			    XK_j,           movestack,      {.i = +1 } },
-	{ MODKEY|ShiftMask,			    XK_k,           movestack,      {.i = -1 } },
+	{ MODKEY|ShiftMask,		XK_j,           movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_k,           movestack,      {.i = -1 } },
 	{ MODKEY|ControlMask|ShiftMask, XK_j,           incrgaps,       {.i = +1 } },
 	{ MODKEY|ControlMask|ShiftMask, XK_k,           incrgaps,       {.i = -1 } },
 	{ MODKEY,                       XK_m,           togglegaps,     {0} },
@@ -183,8 +184,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-    { MODKEY|ControlMask,           XK_BackSpace,   self_restart,   {0} },
-	{ MODKEY|ShiftMask,             XK_q,		    quit,           {0} },
+	{ MODKEY|ControlMask,           XK_BackSpace,   self_restart,   {0} },
+    	{ MODKEY|ShiftMask,             XK_q,		    quit,           {0} },
 };
 
 /* button definitions */

@@ -25,17 +25,17 @@ static const Block blocks[] = {
 //	{"",		"sb-clock",	60,	1},
 //	{"",		"sb-internet",	5,	4},
 //	{"",		"sb-help-icon",	0,	15},
-	{"",		"sb-pacpackages",	0,		8},
-	{"",		"sb-news",			60,		6},
-	{"",		"sb-mailbox",		10, 	12},
-	{"",		"sb-music",			1,		11},
-	{"",		"sb-volume",		1,		10},
-	{"",		"sb-forecast",		18000,	5},
-	{"",		"sb-memory",		30,		14},
-	{"",		"sb-nettraf",		1,		16},
-	{"",		"sb-internet",		1,		4},
-	{"",		"sb-battery",		5,		3},
-	{"",		"sb-clock",			1,		1},
+	{"",		"sb_pacpackages",	0,		8},
+	{"",		"sb_news",			60,		6},
+	{"",		"sb_mailbox",		10, 	12},
+	{"",		"sb_music",			1,		11},
+	{"",		"sb_volume",		1,		10},
+	{"",		"sb_forecast",		18000,	5},
+	{"",		"sb_memory",		30,		14},
+	{"",		"sb_nettraf",		1,		16},
+	{"",		"sb_internet",		1,		4},
+	{"",		"sb_battery",		5,		3},
+	{"",		"sb_clock",			1,		1},
 };
 
 
@@ -46,3 +46,4 @@ static char *delim = " ";
 // vim with the following line in your vimrc/init.vim:
 
 // autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+
