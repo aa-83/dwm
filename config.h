@@ -58,7 +58,7 @@ static const Rule rules[] = {
 	{ "vncviewer",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
 	{ "Dosbox",			 NULL,     NULL,           1 << 6,    0,          0,           0,        -1 },
 	{ "qBittorrent",		 NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
-	{ "Discord-canary",		 NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
+	{ "discord",		         NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
 	{ "Bless",			 NULL,     NULL,           1 << 2,    0,          0,           0,        -1 },
 	{ "libreoffice",		 NULL,     NULL,           1 << 1,    0,          0,           0,        -1 },
 	{ "St",				 NULL,     NULL,           0,         0,          1,           0,        -1 },
